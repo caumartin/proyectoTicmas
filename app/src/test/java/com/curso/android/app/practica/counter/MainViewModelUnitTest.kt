@@ -38,8 +38,8 @@ class MainViewModelUnitTest {
 
     @Test
     fun mainViewModel_CheckInitialValue() = runTest {
-        val value = viewModel.counter.value?.number
-        assertEquals(0, value)
+        val value = viewModel.comparacion.value?.iguales
+        assertEquals(false, value)
     }
 
     @Test
@@ -48,8 +48,8 @@ class MainViewModelUnitTest {
             viewModel.comparar("hola", "hola")
         }
         advanceUntilIdle()
-        val value = viewModel.counter.value?.number
-        assertEquals(1, value)
+        val value = viewModel.comparacion.value?.iguales
+        assertEquals(true, value)
     }
 
     @Test
@@ -58,8 +58,8 @@ class MainViewModelUnitTest {
             viewModel.comparar("hola", "chau")
         }
         advanceUntilIdle()
-        val value = viewModel.counter.value?.number
-        assertEquals(0, value)
+        val value = viewModel.comparacion.value?.iguales
+        assertEquals(false, value)
     }
 
 }

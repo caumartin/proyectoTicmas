@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mainViewModel.counter.observe(this) {
+        mainViewModel.comparacion.observe(this) {
             if (it.iguales){
                 binding.counter.text = "Las cadenas son IGUALES"
                 } else {
