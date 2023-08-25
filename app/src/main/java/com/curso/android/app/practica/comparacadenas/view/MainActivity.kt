@@ -1,9 +1,9 @@
-package com.curso.android.app.practica.counter.view
+package com.curso.android.app.practica.comparacadenas.view
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.curso.android.app.practica.counter.databinding.ActivityMainBinding
+import com.curso.android.app.practica.comparacadenas.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
 
         mainViewModel.comparacion.observe(this) {
             if (it.iguales){
-                binding.counter.text = "Las cadenas son IGUALES"
+                binding.resultado.text = "Las cadenas son IGUALES"
                 } else {
-                    binding.counter.text = "Las cadenas son DISTINTAS"
+                    binding.resultado.text = "Las cadenas son DISTINTAS"
                 }
         }
 

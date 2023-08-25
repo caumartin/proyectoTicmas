@@ -1,7 +1,7 @@
-package com.curso.android.app.practica.counter
+package com.curso.android.app.practica.comparacadenas
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.curso.android.app.practica.counter.view.MainViewModel
+import com.curso.android.app.practica.comparacadenas.view.MainViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.*
