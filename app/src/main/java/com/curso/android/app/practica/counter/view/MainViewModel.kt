@@ -15,19 +15,19 @@ class MainViewModel: ViewModel() {
     // Solo queremos que se pueda leer el contador
     val counter: LiveData<Counter> get() = _counter
     // no nos interesa que se modifique por fuera del ViewModel
-    private var _counter = MutableLiveData<Counter>(Counter(0))
+    private var _counter = MutableLiveData<Counter>(Counter(false))
 
     fun comparar(texto1: String, texto2: String) {
-        println(texto1)
-        println(texto2)
-        var next = 0
+//        println(texto1)
+//        println(texto2)
+        var next = false
         if (texto1==texto2) {
-            next = 1
+            next = true
         }
         updateCounter(next)
     }
 
-    private fun updateCounter(next: Int) {
+    private fun updateCounter(next: Boolean) {
         viewModelScope.launch {
             _counter.value = Counter(next)
         }

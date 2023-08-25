@@ -16,11 +16,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         mainViewModel.counter.observe(this) {
-            println("Recibimos un nuevo valor de counter. $it")
-            if (it.number==0){
-                binding.counter.text = "Las cadenas son DISTINTAS"
+            if (it.iguales){
+                binding.counter.text = "Las cadenas son IGUALES"
                 } else {
-                    binding.counter.text = "Las cadenas son IGUALES"
+                    binding.counter.text = "Las cadenas son DISTINTAS"
                 }
         }
 
