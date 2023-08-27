@@ -38,7 +38,7 @@ class MainActivityTest {
         )
 
         Espresso.onView(
-            ViewMatchers.withId(R.id.counter)
+            ViewMatchers.withId(R.id.resultado)
         ).check(
             ViewAssertions.matches(
                 ViewMatchers.withText("0")

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Compara Cadenas</string>
+    <string name="texto_1">Ingrese cadena #1</string>
+    <string name="texto_2">Ingrese cadena #2</string>
+    <string name="cadenas_iguales">Las cadenas son IGUALES</string>
+    <string name="cadenas_distintas">Las cadenas son DISTINTAS</string>
 </resources>

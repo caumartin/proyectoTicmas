@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.curso.android.app.practica.comparacadenas.databinding.ActivityMainBinding
+import com.curso.android.app.practica.comparacadenas.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,9 +18,9 @@ class MainActivity : AppCompatActivity() {
 
         mainViewModel.comparacion.observe(this) {
             if (it.iguales){
-                binding.resultado.text = "Las cadenas son IGUALES"
+                binding.resultado.text = getString(R.string.cadenas_iguales)
                 } else {
-                    binding.resultado.text = "Las cadenas son DISTINTAS"
+                    binding.resultado.text = getString(R.string.cadenas_distintas)
                 }
         }
 
